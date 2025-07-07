@@ -10,7 +10,7 @@ on:
     - master
 
   # Allows you to run this workflow manually from the Actions tab
-  #workflow_dispatch:
+  # workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -34,11 +34,13 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project
 
-      - name: Run custom php file
+      - name: Install php
         run: |
           sudo apt update
           sudo apt install php
           sudo apt install php-cli
+
+      - name: Check php version
         run: |
-          $PHP = 'which php'
-          $PHP -v
+          PHP=`which php`
+          echo $PHP -v
