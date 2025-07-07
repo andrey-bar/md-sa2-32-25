@@ -23,6 +23,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+      - uses: "actions/github-script@v6"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -35,6 +36,5 @@ jobs:
           echo test, and deploy your project
 
       - name: Run custom js file
-      - uses: "actions/github-script@v6"
         run: node ${{ github.action_path }}hello.js
         shell: bash
