@@ -50,4 +50,4 @@ jobs:
           PHP=`which php`
           $PHP -v
           $PHP hello.php
-        shell: bash
+        #shell: bash
