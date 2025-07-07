@@ -45,13 +45,14 @@ jobs:
           sudo apt update
           sudo apt install nginx php8.3-fpm
 
-      #- name: Check php version
-      #  run: |
-      #    PHP=`which php`
-      #    echo $PHP -v
-      #  shell: bash
-        
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: 8.3
+
+      - name: Check php version
+        run: |
+          PHP=`which php`
+          $PHP -v
+          $PHP -r hello.php
+        shell: bash
