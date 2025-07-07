@@ -54,5 +54,5 @@ jobs:
         run: |
           PHP=`which php`
           $PHP -v
-          $PHP -r hello.php
+          $PHP hello.php
         shell: bash
