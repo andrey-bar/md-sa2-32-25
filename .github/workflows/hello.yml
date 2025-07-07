@@ -33,3 +33,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project
+
+      - name: Run custom js file
+      - uses: "actions/github-script@v6"
+        run: node ${{ github.action_path }}hello.js
+        shell: bash
