@@ -36,6 +36,9 @@ jobs:
 
       - name: Run custom php file
         run: |
+          sudo apt update
           sudo apt install php
           sudo apt install php-cli
-          echo php -v
+        run: |
+          $PHP = 'which php'
+          $PHP -v
