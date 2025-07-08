@@ -24,16 +24,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project
-
       - name: Install php
         run: |
           sudo add-apt-repository ppa:ondrej/php
@@ -49,5 +39,8 @@ jobs:
         run: |
           PHP=`which php`
           $PHP -v
+
+      - name: Print message from file
+        run: |
+          PHP=`which php`
           $PHP hello.php
-        #shell: bash
