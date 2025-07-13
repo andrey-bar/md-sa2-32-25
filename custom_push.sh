@@ -12,4 +12,3 @@ do
 done    
 
 echo "Push completed"
-
